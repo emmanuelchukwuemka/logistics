@@ -1,0 +1,19 @@
+import { {{pascalCase name}}Input } from "./{{kebabCase name}}.validations";
+
+export const {{camelCase name}}Method = async (data: {{pascalCase name}}Input) => {
+  try {
+    // Abeg ur business logic should go here
+    
+    return {
+      success: true,
+      message: "{{pascalCase name}} action completed successfully",
+      data: { id: 1 },
+    };
+  } catch (error) {
+    console.error(error);
+    return {
+      success: false,
+      message: "{{pascalCase name}} action failed",
+    };
+  }
+};

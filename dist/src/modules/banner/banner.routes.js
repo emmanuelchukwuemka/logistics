@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const banner_controllers_1 = require("./banner.controllers");
+const router = (0, express_1.Router)();
+router.post("/", banner_controllers_1.AppBannerController.create);
+router.get("/", banner_controllers_1.AppBannerController.getAll);
+router.get("/:id", banner_controllers_1.AppBannerController.getById);
+router.put("/:id", banner_controllers_1.AppBannerController.update);
+router.delete("/:id", banner_controllers_1.AppBannerController.delete);
+exports.default = router;

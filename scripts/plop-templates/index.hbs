@@ -1,0 +1,7 @@
+import { Router } from "express"; 
+import {{camelCase name}}Routes from "./{{dashCase name}}.routes"; 
+import { {{camelCase name}}Secure } from "./{{dashCase name}}.middlewares";
+
+const router = Router(); router.use("/", {{camelCase name}}Secure, {{camelCase name}}Routes); 
+
+export default router;
