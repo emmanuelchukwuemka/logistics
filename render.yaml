@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: logitsics-api
+    runtime: node
+    buildCommand: npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        generateValue: true
+    healthCheckPath: /server/heartbeat
+    autoDeploy: false
