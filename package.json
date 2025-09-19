@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon",
-    "build": "tsc && npx copyfiles .env dist",
+    "build": "tsc && (npx copyfiles .env dist || true)",
     "start": "node dist/index.js",
     "module-init": "plop --plopfile scripts/plopfile.silo.js"
   },
